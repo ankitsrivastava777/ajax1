@@ -11,12 +11,12 @@ $run = mysqli_query($conn, $query);
 while ($data = mysqli_fetch_assoc($run)) {
 	?>
 	<tr>
- <td><?php echo $data['id']; ?></td>
-<td> <?php echo $data['name']; ?></td>
-<td><?php echo $data['email']; ?> </td>
-<td> <?php echo $data['message']; ?></td>
-<td> <?php echo $data['date']; ?></td>
-</tr>
+<td><?php echo $data['id'];?></td>
+<td> <?php echo $data['name'];?></td>
+<td><?php echo $data['email'];?> </td>
+<td> <?php echo $data['message'];?></td>
+<td> <?php echo $data['date'];?></td>
+   </tr>
 <?php
 }
 

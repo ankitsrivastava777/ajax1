@@ -13,13 +13,13 @@
 <body>
 
 
-
+  <center><h1>Displayed Data from Database Using JSON</h1></center>
 
 
    
     <table class="table">
         <thead>
-              <th>Id</th>
+            <th>Id</th>
             <th>Name</th>
             <th>Email</th>
             <th>message</th>
@@ -33,70 +33,52 @@
     
 
     <script type="text/javascript">
-     $(document).ready(function(){
-      display();
-        function display()
-        {
+   $(document).ready(function() {
+    display();
+
+    function display() {
         $.ajax({
 
             url: 'insert1.php',
-            type:'POST',
+            type: 'POST',
             datatype: 'JSON',
-            success:function(data)
-            {
-              console.log(jQuery.parseJSON(data));
-              var l = jQuery.parseJSON(data);
+            success: function(data) {
+                console.log(jQuery.parseJSON(data));
+                var l = jQuery.parseJSON(data);
 
-              // $.each(l, function (i) {
-              //     $.each(l[i], function (key, val) {
-              //        console.log(l[i].message);
 
-              //     });
-              // });
 
-              l.forEach(function(dt)
-              {
-                $("#dbdata").append("<tr>" + 
+                l.forEach(function(dt) {
+                    $("#dbdata").append("<tr>" +
 
-                  "<td>" +dt.id+ "</td>"+
-                   "<td>" +dt.name+ "</td>"+
-                    "<td>" +dt.email+ "</td>"+
-                     "<td>" +dt.message+ "</td>"+
-                      "<td>" +dt.date+ "</td>"+
-                       "</tr>"
-                  );
-              });
+                        "<td>" + dt.id + "</td>" +
+                        "<td>" + dt.name + "</td>" +
+                        "<td>" + dt.email + "</td>" +
+                        "<td>" + dt.message + "</td>" +
+                        "<td>" + dt.date + "</td>" +
+                        "</tr>"
+                    );
+                });
 
-              setTimeout(function(){
-    location = 'display.php'
-  },3000)
+                setTimeout(function() {
+                    location = 'display.php'
+                }, 5000)
 
-//             $.each( data, function( key, value ) {
-//   alert( key + ": " + value );
-// });
-// var abc = JSON.stringify(data);
-//           // console.log(JSON.parse(data));
-//         var  arr = JSON.parse(abc); //convert to javascript array
-// console.log(arr);   
 
 
             }
 
 
 
-});
-     
-   }
-// setInterval(function()
-//     {
-//         $('#dbdata').load("display.php").fadeIn("slow");
-//     }, 5000);
- 
- });
+        });
 
+    }
+
+
+});
 </script>
 
-    </script>
+
 
 
   </body>
