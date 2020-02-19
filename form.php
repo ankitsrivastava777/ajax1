@@ -12,23 +12,17 @@
  </head>
  <body>
 
-
-
 <form class="text-center border border-light p-5" action="insert.php" method="POST"  id="myForm">
 
     <p class="h4 mb-4">FORM</p>
-<input type="text" id="name" class="form-control mb-4" name="name" placeholder="Name">
-  
-<input type="email" id="email" name="email" class="form-control mb-4" placeholder="E-mail">
+        <input type="text" id="name" class="form-control mb-4" name="name" placeholder="Name">
+          
+        <input type="email" id="email" name="email" class="form-control mb-4" placeholder="E-mail">
 
-      
-<textarea class="form-control mb-4" name="message" id="message" placeholder="Write your message"></textarea>
-<input type="date" id="date" name="date" class="form-control datepicker" placeholder="Date">
-
-
-
-   
-    <input type="submit" class="btn btn-info btn-block my-4" name="submit" value="submit" id="submit">
+              
+        <textarea class="form-control mb-4" name="message" id="message" placeholder="Write your message"></textarea>
+        <input type="date" id="date" name="date" class="form-control datepicker" placeholder="Date">
+        <input type="submit" class="btn btn-info btn-block my-4" name="submit" value="submit" id="submit">
  
 </form>
 <!-- To show the submit success or failed message. -->
@@ -50,7 +44,6 @@
         </tbody>
 
     </table>
-
 
 
 <script type="text/javascript">
